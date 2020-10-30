@@ -12,7 +12,20 @@
 
 # Package Files #
 *.jar
-*.war
+*.warnpm install discord.js const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
+
+client.login('token');
 *.nar
 *.ear
 *.zip
@@ -21,3 +34,35 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+mkdir my-bot
+cd my-bot
+npm init -y # generates you a minimal package.json file
+npm install discord.js const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
+
+client.login('NzcxNTkyMDk4Mjk4MjAwMTE1.X5uXIw.y17OcUgh1LVefEnN6c9mQj-Fvlg');npm install nodemon --save-dev {
+  "name": "my-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
+npm run dev
